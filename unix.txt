@@ -1,0 +1,126 @@
+https://yourlearning.ibm.com/activity/UDEMY-1386294
+date- to display the date
+cal- to display the calendar of current month
+cal 6 1995 - to display particular month of the calendar
+clear- to clean the terminal
+pwd- print working directory - display the current working directory
+ls - list
+cd- change directory
+'cd-' home directory will come
+'cd /' root directoy will come
+ls -i --> to know inode number
+
+hard link file:
+ln originalfile hardfile
+ls -i
+inode number should be same
+
+soft link file:
+ln -s originalfile softfile
+
+---
+ls commands:
+ls --> will list the all files in alphabetical order
+ls -a -->will show all files including hidden files.
+ls -t -->will show file based on time sorted order
+ls -r -->list the files in reverse order 
+ls -R -->list the all files including inside the sub directories
+ls -li or ls -l -i --> list the files will inode number and all details
+ls -tr -->will show all files time based reverse order
+ls -ltr-->list all files time based in reverse order
+ls -latR--> list the all files inside sub directories
+-----
+changing the time stamp of existing file:
+touch 'existing filena'
+(touch temp1)
+multiple file:
+touch temp1 temp2
+--------
+mkdir- to create the new directory name
+(make directory)
+rmdir- to remove the directory
+touch new/file -- example for creating the empty file inside the directory
+rmdir -- won't delete the directory if it contains any file/data
+-----------
+rm- remove
+rm -R --> will delete the directory including the sub directories
+rm -i file1 --> will ask the confirmation before deleting
+rm -Ri --> will ask the confirmation before deleting of the directory
+rm -f file1 --> will delete the file forcefully
+(-f --> will ingnore the not existing files)
+rm -v --> will show the summary of deleted files
+(-r and -R both are same)
+-----------
+cp- copy
+cp file file2 - will create the copy of file1
+cp file file2 newdir - copying file1 n file2 to new direcory folder
+cp -R dir1 dir2 -- copy the entire dir1 folder/directory to dir2
+cp -i file1 file2 - will ask the confirmation if the same file name exists
+cp -v file1 file2 - will give the summary command
+---------
+mv - move or rename the files
+mv oldfilename newfilename- rename the files
+mv file1 dir -- moving file to folder
+mv -i file1 dir -- will ask the confirmation
+mv dir1 dir2 -- rename the directoy, if dir2 exists dir2 will renamed to dir1 and dir2 data will move to dir1.
+----------
+file file1: file command give the details about file1
+----------
+mkdir 'my folder' or mkdir "my folder" --> create the dir/folder name with space
+mkdir my\ folder--> create the dir/folder name with space
+rmdir command will replace the mkdir to delte the folder/directories
+mkdir \$folder --> will create the folder/dir name with special character --> $folder
+mkdir folder\&name --> folder&name
+rmdir 'special char name file' --> to delete the special character name 
+
+
+-------------
+file permissions:
+-rwxrw-xr-x
+1st position:
+- regular file
+d directory
+l symbolic link
+
+r read permission
+w write permission
+x execute permission
+---
+permission categories
+u user
+g group
+o other
+a all
+
+
+-rw-r--r--
+positions:
+1 Type(- file / d directory)
+2-4 user
+5-7 group
+8-10 other
+
+changing permissionL
+chmod -- change mode command
+ugoa -- user, group, other and all
++-=  -- Add, subtract, or set permissions
+rwx  -- read, write and execute
+
+chmod g+w temp ---> giving write permission for temp file to entire group
+chmod g-w temp ---> revoking write permission for temp file to entire group
+chmod a=r temp ---> will give access read to all
+(it'll become as -r--r--r--)
+
+r w x
+0 0 0 value for off
+1 1 1 binary value for on
+4 2 1 base 1- value for on
+
+-rwx------ 700
+-rwxr-xr-x 755
+-rw-rw-r-- 664
+-rw-rw---- 660
+-rw-r--r-- 644
+
+
+
